@@ -135,13 +135,13 @@ private:
 
 	PassConstants mMainPassCB;
 
-	//XMFLOAT3 mEyePos = { 0.0f, 0.0f, -10.0f };
-	//XMFLOAT4X4 mView = MathHelper::Identity4x4();
-	//XMFLOAT4X4 mProj = MathHelper::Identity4x4();
+	XMFLOAT3 mEyePos = { 0.0f, 0.0f, -10.0f };
+	XMFLOAT4X4 mView = MathHelper::Identity4x4();
+	XMFLOAT4X4 mProj = MathHelper::Identity4x4();
 
-	//float mTheta = 1.3f * XM_PI;
-	//float mPhi = 0.4f * XM_PI;
-	//float mRadius = 2.5f;
+	float mTheta = 1.3f * XM_PI;
+	float mPhi = 0.4f * XM_PI;
+	float mRadius = 2.5f;
 
 	/**
 	* @brief (mLastMousePos) Lattest position of the mouse.

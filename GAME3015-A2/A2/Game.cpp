@@ -71,8 +71,6 @@ void Game::processInput()
 	CommandQueue& commands = mWorld.getCommandQueue();
 	mPlayer.handleEvent(commands);
 	mPlayer.handleRealtimeInput(commands);
-
-
 }
 
 
@@ -249,14 +247,14 @@ void Game::OnKeyboardInput(const GameTimer& gt)
 void Game::UpdateCamera(const GameTimer& gt)
 {
 	// Convert Spherical to Cartesian coordinates.
-	//mEyePos.x = mRadius * sinf(mPhi) * cosf(mTheta);
-	//mEyePos.z = mRadius * sinf(mPhi) * sinf(mTheta);
-	//mEyePos.y = mRadius * cosf(mPhi);
+	mEyePos.x = mRadius * sinf(mPhi) * cosf(mTheta);
+	mEyePos.z = mRadius * sinf(mPhi) * sinf(mTheta);
+	mEyePos.y = mRadius * cosf(mPhi);
 
 	//// Build the view matrix.
-	//XMVECTOR pos = XMVectorSet(mEyePos.x, mEyePos.y, mEyePos.z, 1.0f);
-	//XMVECTOR target = XMVectorZero();
-	//XMVECTOR up = XMVectorSet(0.0f, 1.0f, 0.0f, 0.0f);
+	XMVECTOR pos = XMVectorSet(mEyePos.x, mEyePos.y, mEyePos.z, 1.0f);
+	XMVECTOR target = XMVectorZero();
+	XMVECTOR up = XMVectorSet(0.0f, 1.0f, 0.0f, 0.0f);
 
 	//XMMATRIX view = XMMatrixLookAtLH(pos, target, up);
 	//XMStoreFloat4x4(&mView, view);

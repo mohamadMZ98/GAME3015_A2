@@ -72,7 +72,7 @@ void World::buildScene()
 	std::unique_ptr<SpriteNode> backgroundSprite(new SpriteNode(mGame));
 	mBackground = backgroundSprite.get();
 	mBackground->setPosition(0.0f, -5.0f, 0.0f);
-	mBackground->setScale(200.0, 1.0, 200.0);
+	mBackground->setScale(200.0, 1.0, 1000.0);
 	mSceneGraph->attachChild(std::move(backgroundSprite));
 
 	mSceneGraph->build();
